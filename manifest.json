@@ -1,0 +1,13 @@
+{
+  "name": "Armory Raider.io",
+  "description": "Adds raider.io shortcut to WoW armory.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["*://*.worldofwarcraft.com/*/character/"],
+      "js": ["main.js"]
+    }
+  ],
+  "host_permissions": ["https://worldofwarcraft.com/"]
+}
