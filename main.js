@@ -28,8 +28,13 @@ async function addRaiderIOLink(header) {
   );
 }
 
-function getRaiderIOHref() {
+function getCharacterPath () {
   const [, respectivePath] = window.location.pathname.split('character/');
+  return respectivePath;
+}
+
+function getRaiderIOHref() {
+  const respectivePath = getCharacterPath();
   return `https://raider.io/characters/${respectivePath}`;
 }
 
