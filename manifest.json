@@ -12,7 +12,7 @@
   "host_permissions": ["https://worldofwarcraft.com/"],
   "web_accessible_resources": [
     {
-      "resources": ["images/raider-io.svg"],
+      "resources": ["images/raider-io.svg", "images/warcraft-logs.png"],
       "matches": ["<all_urls>"]
     }
   ]

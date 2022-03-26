@@ -22,6 +22,10 @@ async function addRaiderIOLink(header) {
       createLogoLink({
         href: getRaiderIOHref(),
         image: { url: `${EXTENSION_URL}/images/raider-io.svg`, alt: 'raider-io-logo' },
+      }),
+      createLogoLink({
+        href: getWarcraftLogsHref(),
+        image: { url: `${EXTENSION_URL}/images/warcraft-logs.png`, alt: 'warcraft-logs-logo' },
         isLast: true,
       }),
     ),
@@ -38,6 +42,11 @@ function getRaiderIOHref() {
   return `https://raider.io/characters/${respectivePath}`;
 }
 
+function getWarcraftLogsHref() {
+  const respectivePath = getCharacterPath();
+  return `https://www.warcraftlogs.com/character/${respectivePath}`;
+}
+
 function createNameArea(...links) {
   return `
     <div class="CharacterHeader-nameArea">
@@ -49,7 +58,7 @@ function createNameArea(...links) {
 }
 
 function createLogoLink({ image, href, isLast }) {
-  const imageClasses = isLast ? '' : 'class="margin-right-double-tiny"';
+  const imageClasses = isLast ? '' : 'class="margin-right-double-xSmall"';
 
   return `
     <a href="${href}" target="_blank" rel="noreferrer">
