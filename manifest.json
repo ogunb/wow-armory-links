@@ -1,13 +1,19 @@
 {
-  "name": "Armory Raider.io",
-  "description": "Adds raider.io shortcut to WoW armory.",
+  "name": "WoW Armory Links",
+  "description": "Adds shortcuts to WoW armory.",
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["*://*.worldofwarcraft.com/*/character/"],
+      "matches": ["*://*.worldofwarcraft.com/*/character/*"],
       "js": ["main.js"]
     }
   ],
-  "host_permissions": ["https://worldofwarcraft.com/"]
+  "host_permissions": ["https://worldofwarcraft.com/"],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/raider-io.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
